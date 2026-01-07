@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Message Board</title>
+</head>
+<body>
+
+    <% for (let i = 0; i < messages.length; i++) { %>
+        <p>
+            <strong><%= messages[i].user %></strong>:
+            <%= messages[i].text %>
+            <br>
+            <small><%= messages[i].added.toDateString() %></small>
+            <!-- <a href="">open message</a> -->
+
+        </p>
+    <% } %>
+
+    <a href="/new">new message</a>
+
+</body>
+</html>
