@@ -13,7 +13,7 @@
             <%= messages[i].text %>
             <br>
             <small><%= messages[i].added.toDateString() %></small>
-            <!-- <a href="">open message</a> -->
+            <a href="/message/<%= messages[i].text %>" >open message</a>
 
         </p>
     <% } %>

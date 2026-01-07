@@ -28,4 +28,10 @@ indexRouter.post("/new", (req, res) => {
     res.redirect("/")
 })
 
+indexRouter.get("/message/:text", (req,res) => {
+    text_ = req.params.text;
+    const message = messages.find(m => m.text == text_)
+    res.render("message", {message})
+})
+
 module.exports = indexRouter;
